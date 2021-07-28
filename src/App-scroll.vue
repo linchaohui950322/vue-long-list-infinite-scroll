@@ -13,6 +13,13 @@
         </li>
       </template>
       <li ref="bottom" :style="liStyle(vList.length - 1)" data-pos="bottom" class="li">{{ vList[vList.length - 1] }}</li>
+      <!-- <li
+        v-for="item in list"
+        :key="item"
+        class="li-list"
+      >
+        {{ item }}
+      </li> -->
     </ul>
   </div>
 </template>
@@ -116,14 +123,21 @@ export default {
 .ul {
   position: relative;
   width: 100%;
-  height: 300px;
-  overflow-y: auto;
 }
 .li {
   height: 100px;
   width: 100%;
   border: 1px solid #000;
   position: absolute;
+  display: block;
+  list-style: none;
+  box-sizing: border-box;
+}
+.li-list {
+  height: 100px;
+  width: 100%;
+  border: 1px solid #000;
+  position: relative;
   display: block;
   list-style: none;
   box-sizing: border-box;
